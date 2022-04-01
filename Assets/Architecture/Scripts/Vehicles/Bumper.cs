@@ -4,6 +4,8 @@ namespace Vehicles
 {
     public class Bumper : MonoBehaviour
     {
+        public Vehicle Vehicle => _vehicle;
+        
         [SerializeField] private Vehicle _vehicle;
     
 

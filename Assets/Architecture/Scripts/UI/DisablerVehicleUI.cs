@@ -5,9 +5,9 @@ using Vehicles;
 
 namespace UI
 {
-    public class HiderVehicleUI : MonoBehaviour, IPointerClickHandler
+    public class DisablerVehicleUI : MonoBehaviour, IPointerClickHandler
     {
-        [SerializeField] private bool _autoHide;
+        [SerializeField] private bool _autoDisable;
         private GameServices _gameServices;
         
 
@@ -15,18 +15,18 @@ namespace UI
 
         void IPointerClickHandler.OnPointerClick(PointerEventData eventData)
         {
-            if (_autoHide) return;
+            if (_autoDisable) return;
 
 
             if (_gameServices.SceneData.PreviousSelectedVehicle != null)
                 _gameServices.SceneData.PreviousSelectedVehicle.UI.VisibleUI(false);
 
-            _gameServices.SceneData.CameraController.ResetCamera();
+            _gameServices.CameraController.ResetCamera();
         }
 
         private void OnTriggerEnter(Collider other)
         {
-            if (_autoHide == false) return;
+            if (_autoDisable == false) return;
 
 
             if (other.gameObject.TryGetComponent(out Vehicle vehicle))
@@ -35,7 +35,7 @@ namespace UI
                 
                 
                 vehicle.UI.VisibleUI(false);
-                _gameServices.SceneData.CameraController.ResetCamera();
+                _gameServices.CameraController.ResetCamera();
             }
         }
     }

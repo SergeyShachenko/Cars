@@ -16,11 +16,13 @@ namespace Vehicles
         }
         public VehicleUIController UI => _ui;
         public VehicleData Data => _data;
+        public Vehicle BackVehicle => _backVehicle;
 
         [SerializeField] private VehicleData _data;
         [SerializeField] private VehicleUIController _ui;
         private GameServices _gameServices;
-        private PathCreator _pathCreator;  
+        private PathCreator _pathCreator;
+        private Vehicle _backVehicle;
         private float _defaultSpeed, _currentSpeed, _speedOffset, _minSpeed, _speedStage;
         private float _distanceTravelled;
         private bool _isMovable;
@@ -48,7 +50,13 @@ namespace Vehicles
 
             _isMovable = true;
         }
-    
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.gameObject.TryGetComponent(out Bumper bumper))
+                _backVehicle = bumper.Vehicle;
+        }
+
         public void SpeedStageUp(float multiplier = 1) => 
             _currentSpeed = Mathf.Clamp(_currentSpeed + _speedStage * multiplier, _minSpeed, _data.Speed);
     
@@ -56,6 +64,12 @@ namespace Vehicles
             _currentSpeed = Mathf.Clamp(_currentSpeed - _speedStage * multiplier, _minSpeed, _data.Speed);
     
         public void SetDefaultSpeed() => _currentSpeed = _defaultSpeed;
+
+        public void StartLinkedVehicles()
+        {
+            SetDefaultSpeed();
+            if (_backVehicle != null) _backVehicle.StartLinkedVehicles();
+        }
 
         private void Move(bool canMove)
         {

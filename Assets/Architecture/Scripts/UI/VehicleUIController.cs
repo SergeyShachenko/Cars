@@ -28,7 +28,7 @@ namespace UI
 
         private void Update()
         {
-            _canvas.LookAt(_canvas.position + _gameServices.SceneData.CameraController.transform.forward);
+            _canvas.LookAt(_canvas.position + _gameServices.CameraController.transform.forward);
             _textSpeed.text = Mathf.Round(_vehicle.CurrentSpeed).ToString();
         }
 
@@ -42,11 +42,11 @@ namespace UI
                     _gameServices.SceneData.PreviousSelectedVehicle.UI.VisibleUI(false);
                 
                 _gameServices.SceneData.PreviousSelectedVehicle = _vehicle;
-                _gameServices.SceneData.CameraController.LookAt(transform);
+                _gameServices.CameraController.LookAt(transform);
             }
             else
             {
-                _gameServices.SceneData.CameraController.ResetCamera();
+                _gameServices.CameraController.ResetCamera();
             }
         }
         

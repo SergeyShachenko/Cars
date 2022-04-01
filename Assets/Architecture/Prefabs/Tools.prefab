@@ -278,7 +278,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6698646272458464428}
-  - component: {fileID: 5222505598575863763}
   m_Layer: 0
   m_Name: Tools
   m_TagString: Untagged
@@ -303,18 +302,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5222505598575863763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6698646272458464419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 899596d7b003442da0c64a38cfa86091, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6698646272809116868
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,6 +348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d83f1dcfdd2235d4daa11008251e4e6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cameraController: {fileID: 0}
   _vehicleSpawner: {fileID: 3070145952558733824}
   _gameData: {fileID: 11400000, guid: ad823f3ce96653e4782336130cb42972, type: 2}
   _sceneData: {fileID: 6038020658697732823}
@@ -376,7 +364,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff719f2777df42f99caf3859314f1d3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraController: {fileID: 0}
 --- !u!1 &8438092971577005997
 GameObject:
   m_ObjectHideFlags: 0
