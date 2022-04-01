@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bce3c3cce77dbe5499f44805406d26f5, type: 3}
+  m_Name: GameData
+  m_EditorClassIdentifier: 
+  _settings: {fileID: 11400000, guid: 5e0de586e3b48fe46ada99b8deea1a61, type: 2}
+  _vehicles:
+  - {fileID: 5653741124985887025, guid: f58ae5513fec2564b95c2993997dd6de, type: 3}
+  - {fileID: 5653741124985887025, guid: e6c06293df018e349bf1da44635b72e8, type: 3}
+  - {fileID: 5653741124985887025, guid: 68840c673a0b18e41a044ed077548d55, type: 3}
+  - {fileID: 5653741124985887025, guid: aca9bcb669ac3e44c8532910e9289381, type: 3}
+  - {fileID: 5653741124985887025, guid: 18467b8d222410140a53bf0c3af298a3, type: 3}

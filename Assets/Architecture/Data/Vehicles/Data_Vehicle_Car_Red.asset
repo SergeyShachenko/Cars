@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b72737c918a291140b762f1026ccf851, type: 3}
+  m_Name: Data_Vehicle_Car_Red
+  m_EditorClassIdentifier: 
+  _prefab: {fileID: 118600, guid: e6c06293df018e349bf1da44635b72e8, type: 3}
+  _speed: 20
+  _speedChangeCompensation: 2
+  _owner: "\u0422\u043E\u0445\u0430 \u041A\u0430\u0431\u0440\u0438\u043E\u043B\u0435\u0442"
