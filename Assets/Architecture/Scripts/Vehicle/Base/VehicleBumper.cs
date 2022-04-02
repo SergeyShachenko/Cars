@@ -1,17 +1,17 @@
 using UnityEngine;
 
-namespace Vehicles
+namespace Vehicle.Base
 {
     public class VehicleBumper : MonoBehaviour
     {
-        public Vehicle Vehicle => _vehicle;
+        public VehicleBase Vehicle => _vehicle;
         
-        [SerializeField] private Vehicle _vehicle;
+        [SerializeField] private VehicleBase _vehicle;
     
 
         private void OnTriggerStay(Collider other)
         {
-            if (other.gameObject.TryGetComponent(out Vehicle nearestVehicle))
+            if (other.gameObject.TryGetComponent(out VehicleBase nearestVehicle))
             {
                 if (nearestVehicle.CurrentSpeed > 0f)
                 {
@@ -27,7 +27,7 @@ namespace Vehicles
 
         private void OnTriggerExit(Collider other)
         {
-            if (other.gameObject.TryGetComponent(out Vehicle nearestVehicle))
+            if (other.gameObject.TryGetComponent(out VehicleBase nearestVehicle))
             {
                 nearestVehicle.SpeedStageDown(_vehicle.Data.SpeedChangeCompensation);
                 _vehicle.SpeedStageUp(_vehicle.Data.SpeedChangeCompensation);

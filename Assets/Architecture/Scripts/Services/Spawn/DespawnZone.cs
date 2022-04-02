@@ -1,27 +1,35 @@
 using System.Collections.Generic;
 using System.Linq;
-using Effects;
+using Data;
+using Tools;
 using UnityEngine;
-using Vehicles;
+using Vehicle.Base;
 
 namespace Services.Spawn
 {
     public class DespawnZone : MonoBehaviour
     {
-        private List<Vehicle> _vehiclesForDestroy;
+        private GameData _gameData;
+        private VehicleSpawner _vehicleSpawner;
+        private List<VehicleBase> _vehiclesForDestroy;
 
-        
-        private void Start() => _vehiclesForDestroy = new List<Vehicle>();
+
+        private void Start()
+        {
+            _gameData = GameServices.Instance.GameData;
+            _vehicleSpawner = GameServices.Instance.VehicleSpawner;
+            _vehiclesForDestroy = new List<VehicleBase>();   
+        }
 
         private void Update() => DestroyVehicles(canDestroy: _vehiclesForDestroy.Count > 0);
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.TryGetComponent(out Vehicle vehicle))
+            if (other.gameObject.TryGetComponent(out VehicleBase vehicle))
             {
-                vehicle.View.DissolveEffect.Play(DissolveEffect.DissolveType.Disappear);
+                vehicle.View.DissolveEffect.Play(DissolveEffect.Type.Disappear);
                 _vehiclesForDestroy.Add(vehicle);
-                GameServices.Instance.VehicleSpawner.SpawnRandomVehicle();
+                _vehicleSpawner.SpawnRandomVehicle();
             }
         }
         
@@ -33,7 +41,7 @@ namespace Services.Spawn
 
             var vehicle = _vehiclesForDestroy.First();
             var dissolveEnd = 
-                vehicle.View.DissolveEffect.PlayTime > GameServices.Instance.GameData.Settings.DissolveDuration;
+                vehicle.View.DissolveEffect.PlayTime > _gameData.Settings.DissolveDuration;
 
             if (dissolveEnd)
             {

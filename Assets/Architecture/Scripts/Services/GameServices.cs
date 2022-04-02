@@ -8,12 +8,15 @@ namespace Services
     public class GameServices : MonoBehaviour
     {
         public static GameServices Instance { get; private set; }
+
+        public UIController UIController => _uiController;
         public CameraController CameraController => _cameraController;
         public VehicleSpawner VehicleSpawner => _vehicleSpawner;
         public GameData GameData => _gameData;
         public SceneData SceneData { get; private set; }
 
         [Header("Services")] 
+        [SerializeField] private UIController _uiController;
         [SerializeField] private CameraController _cameraController;
         [SerializeField] private VehicleSpawner _vehicleSpawner;
 

@@ -1,19 +1,19 @@
 using System.Collections.Generic;
 using UnityEngine;
-using Vehicles;
+using Vehicle.Base;
 
 namespace Services.Spawn
 {
     public class SpawnZone : MonoBehaviour
     {
-        public List<Vehicle> VehiclesOnTheZone { get; private set; }
+        public List<VehicleBase> VehiclesOnTheZone { get; private set; }
 
 
-        private void Start() => VehiclesOnTheZone = new List<Vehicle>();
+        private void Start() => VehiclesOnTheZone = new List<VehicleBase>();
 
         private void OnTriggerExit(Collider other)
         {
-            if (other.gameObject.TryGetComponent(out Vehicle vehicle))
+            if (other.gameObject.TryGetComponent(out VehicleBase vehicle))
                 VehiclesOnTheZone.Remove(vehicle);
         }
     }

@@ -1,7 +1,7 @@
-﻿using Effects;
+﻿using Tools;
 using UnityEngine;
 
-namespace Vehicles
+namespace Vehicle.Base
 {
     public class VehicleView : MonoBehaviour
     {

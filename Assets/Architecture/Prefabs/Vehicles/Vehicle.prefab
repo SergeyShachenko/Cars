@@ -28,7 +28,6 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 729626173998262183}
   m_RootOrder: 0
@@ -163,7 +162,6 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 729626173998262183}
   m_RootOrder: 1
@@ -298,7 +296,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 3.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8306600224925439916}
   m_RootOrder: 1
@@ -328,7 +325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d49e3021bbff394295d03af927cf1a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _vehicle: {fileID: 4409278562995474741}
+  _vehicle: {fileID: 7076912352106499314}
 --- !u!1 &2756271524632282681
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,7 +352,6 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1071431464172116929}
   - {fileID: 7446604580314110923}
@@ -394,7 +390,6 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 729626173998262183}
   - {fileID: 8834020471367335704}
@@ -455,7 +450,6 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8834020471367335704}
   m_RootOrder: 0
@@ -588,7 +582,6 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1714767886236371788}
   - {fileID: 3413110533374208462}
@@ -628,7 +621,6 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8834020471367335704}
   m_RootOrder: 1
@@ -763,7 +755,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8306600224925439916}
   m_RootOrder: 2
@@ -811,7 +802,7 @@ GameObject:
   - component: {fileID: 8306600224925439916}
   - component: {fileID: 7225562161794596294}
   - component: {fileID: 9050222159293609789}
-  - component: {fileID: 4409278562995474741}
+  - component: {fileID: 7076912352106499314}
   - component: {fileID: 3104491894298770790}
   - component: {fileID: 3596497480755430007}
   m_Layer: 0
@@ -831,7 +822,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3454144035129470329}
   - {fileID: 1807407201846977934}
@@ -868,7 +858,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4409278562995474741
+--- !u!114 &7076912352106499314
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -877,12 +867,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8306600224925402956}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 372b65f3099732c4eb2b1b2dc3131701, type: 3}
+  m_Script: {fileID: 11500000, guid: 0869c34b61634a05b671105a8da70658, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _view: {fileID: 3104491894298770790}
-  _ui: {fileID: 3596497480755430007}
-  _data: {fileID: 0}
+  VehicleView: {fileID: 3104491894298770790}
+  VehicleUI: {fileID: 3596497480755430007}
+  VehicleData: {fileID: 0}
 --- !u!114 &3104491894298770790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -908,7 +898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ce2ff5f3b2042c2aa4e0fbc87e9686a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _vehicle: {fileID: 4409278562995474741}
+  _vehicle: {fileID: 7076912352106499314}
   _outline: {fileID: 924329787241274544}
   _canvas: {fileID: 3454144035129470329}
   _textOwner: {fileID: 7327374241517548269}

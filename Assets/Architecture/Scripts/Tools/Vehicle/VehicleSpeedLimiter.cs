@@ -1,6 +1,7 @@
 using UnityEngine;
+using Vehicle.Base;
 
-namespace Vehicles
+namespace Tools.Vehicle
 {
     public class VehicleSpeedLimiter : MonoBehaviour
     {
@@ -8,12 +9,12 @@ namespace Vehicles
     
         [SerializeField] private bool _isEnable;
         [SerializeField] private float _speed;
-        private Vehicle _previousVehicle;
+        private VehicleBase _previousVehicle;
 
     
         private void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.TryGetComponent(out Vehicle vehicle) && _isEnable)
+            if (other.gameObject.TryGetComponent(out VehicleBase vehicle) && _isEnable)
             {
                 if (_speed > 0f)
                 {

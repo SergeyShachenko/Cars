@@ -1,34 +1,34 @@
-﻿using Effects;
-using Services;
+﻿using Services;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using Vehicles;
 
-namespace UI
+namespace Vehicle.Base
 {
-    public class VehicleUIController : MonoBehaviour, IPointerClickHandler
+    public class VehicleUI : MonoBehaviour, IPointerClickHandler
     {
         public bool IsVisible { get; private set; }
 
-        [SerializeField] private Vehicle _vehicle;
+        [SerializeField] private VehicleBase _vehicle;
         [SerializeField] private Outline _outline;
         [SerializeField] private Transform _canvas;
         [SerializeField] private TMP_Text _textOwner, _textSpeed;
-        private GameServices _gameServices;
+        private SceneData _sceneData;
+        private CameraController _cameraController;
 
 
         private void Start()
         {
-            _gameServices = GameServices.Instance;
+            _cameraController = GameServices.Instance.CameraController;
+            _sceneData = GameServices.Instance.SceneData;
             _textOwner.text = _vehicle.Data.Owner;
 
-            VisibleUI(false);
+            VisibleUI(IsVisible);
         }
 
         private void Update()
         {
-            _canvas.LookAt(_canvas.position + _gameServices.CameraController.transform.forward);
+            _canvas.LookAt(_canvas.position + _cameraController.transform.forward);
             _textSpeed.text = Mathf.Round(_vehicle.CurrentSpeed).ToString();
         }
 
@@ -38,15 +38,17 @@ namespace UI
 
             if (IsVisible)
             {
-                if (_gameServices.SceneData.PreviousSelectedVehicle != null)
-                    _gameServices.SceneData.PreviousSelectedVehicle.UI.VisibleUI(false);
+                var previousSelectedVehicle = _sceneData._previousSelectedVehicle;
                 
-                _gameServices.SceneData.PreviousSelectedVehicle = _vehicle;
-                _gameServices.CameraController.LookAt(transform);
+                if (previousSelectedVehicle != null && previousSelectedVehicle != _vehicle)
+                    _sceneData._previousSelectedVehicle.UI.VisibleUI(false);
+                
+                _sceneData._previousSelectedVehicle = _vehicle;
+                _cameraController.LookAt(transform);
             }
             else
             {
-                _gameServices.CameraController.ResetCamera();
+                _cameraController.ResetCamera();
             }
         }
         

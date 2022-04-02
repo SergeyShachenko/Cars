@@ -1,15 +1,21 @@
+using Data;
 using Services;
 using UnityEngine;
 
-namespace Vehicles
+namespace Vehicle.Base
 {
     public class VehicleWheel : MonoBehaviour
     {
+        private GameData _gameData;
         private float _speed;
         private bool _isRotate;
 
 
-        private void Start() => _speed = GameServices.Instance.GameData.Settings.WheelSpeed;
+        private void Start()
+        {
+            _gameData = GameServices.Instance.GameData;
+            _speed = _gameData.Settings.WheelSpeed;   
+        }
 
         private void Update()
         {
