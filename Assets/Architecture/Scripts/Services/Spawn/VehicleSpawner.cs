@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Effects;
 using PathCreation;
 using UnityEngine;
 using Vehicles;
@@ -8,7 +9,6 @@ namespace Services.Spawn
 {
     public class VehicleSpawner : MonoBehaviour
     {
-        [SerializeField] private Transform _spawnParent;
         [SerializeField] private PathCreator _pathCreator;
         [SerializeField] private SpawnZone _spawnZone;
         private GameServices _gameServices;
@@ -26,7 +26,7 @@ namespace Services.Spawn
         
         private void Update()
         {
-            SpawnVehicle(canSpawn: _vehiclesForSpawn.Count != 0 && _spawnZone.VehiclesOnTheZone.Count == 0);
+            SpawnVehicle(canSpawn: _vehiclesForSpawn.Count > 0 && _spawnZone.VehiclesOnTheZone.Count == 0);
         }
         
 
@@ -43,13 +43,16 @@ namespace Services.Spawn
         private void SpawnVehicle(bool canSpawn)
         {
             if (canSpawn == false) return;
-        
-        
-            var spawnedVehicle = Instantiate(_vehiclesForSpawn.First().Data.Prefab, _spawnParent).GetComponent<Vehicle>();
+
+
+            var vehicle = _vehiclesForSpawn.First();
+            
+            var spawnedVehicle = Instantiate(vehicle.Data.Prefab, transform).GetComponent<Vehicle>();
             spawnedVehicle.Init(_pathCreator);
+            spawnedVehicle.View.DissolveEffect.Play(DissolveEffect.DissolveType.Appear);
 
             _spawnZone.VehiclesOnTheZone.Add(spawnedVehicle);    
-            _vehiclesForSpawn.Remove(_vehiclesForSpawn.First());
+            _vehiclesForSpawn.Remove(vehicle);
         }
     }
 }

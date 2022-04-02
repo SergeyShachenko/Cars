@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _aimFOV: 35
   _countVehiclesForSpawn: 40
+  _dissolveDuration: 0.5
   _randomSpeedOffset: 6
   _minSpeed: 4
   _speedStage: 0.5
+  _wheelSpeed: 3

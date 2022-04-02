@@ -4,11 +4,9 @@ using UnityEngine;
 
 namespace UI
 {
-    [RequireComponent(typeof(CinemachineVirtualCamera))]
     public class CameraController : MonoBehaviour
     {
         [SerializeField] private CinemachineVirtualCamera _camera;
-        private GameServices _gameServices;
         private Transform _defaultTarget;
         private float _defaultFOV;
         private Quaternion _defaultRotation;
@@ -16,7 +14,6 @@ namespace UI
 
         private void Start()
         {
-            _gameServices = GameServices.Instance;
             _defaultTarget = _camera.m_LookAt;
             _defaultFOV = _camera.m_Lens.FieldOfView;
             _defaultRotation = transform.rotation;
@@ -25,7 +22,7 @@ namespace UI
         public void LookAt(Transform target)
         {
             _camera.m_LookAt = target;
-            _camera.m_Lens.FieldOfView = _gameServices.GameData.Settings.AimFOV;
+            _camera.m_Lens.FieldOfView = GameServices.Instance.GameData.Settings.AimFOV;
         }
         
         public void ResetCamera()

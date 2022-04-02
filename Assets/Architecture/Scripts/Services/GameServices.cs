@@ -11,16 +11,21 @@ namespace Services
         public CameraController CameraController => _cameraController;
         public VehicleSpawner VehicleSpawner => _vehicleSpawner;
         public GameData GameData => _gameData;
-        public SceneData SceneData => _sceneData;
+        public SceneData SceneData { get; private set; }
 
         [Header("Services")] 
         [SerializeField] private CameraController _cameraController;
         [SerializeField] private VehicleSpawner _vehicleSpawner;
-        
+
         [Header("Data")]
         [SerializeField] private GameData _gameData;
-        [SerializeField] private SceneData _sceneData;
 
-        private void Awake() => Instance = this;
+
+        private void Awake()
+        {
+            SceneData = gameObject.AddComponent<SceneData>();
+            
+            Instance = this;  
+        } 
     }
 }

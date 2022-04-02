@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7cce38ba40b7d05439de10ddde5afaf6, type: 2}
+  - {fileID: 2100000, guid: 2ff881bf1d64cb64ea51879113b507bb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 3085899961738780271}
   - component: {fileID: 3515782752580479824}
   - component: {fileID: 860033165458793263}
+  - component: {fileID: 2918978079599041756}
   m_Layer: 0
   m_Name: Wheel_fl
   m_TagString: Untagged
@@ -148,7 +149,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7cce38ba40b7d05439de10ddde5afaf6, type: 2}
+  - {fileID: 2100000, guid: 2ff881bf1d64cb64ea51879113b507bb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -170,6 +171,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2918978079599041756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305688614778408044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ede02566baecfde4c86d220e6e350815, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2204918255686029904
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,6 +194,7 @@ GameObject:
   - component: {fileID: 6661773822261653444}
   - component: {fileID: 4368862386919782119}
   - component: {fileID: 5954048065989466740}
+  - component: {fileID: 3288249031738862820}
   m_Layer: 0
   m_Name: Wheel_fr
   m_TagString: Untagged
@@ -231,7 +245,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7cce38ba40b7d05439de10ddde5afaf6, type: 2}
+  - {fileID: 2100000, guid: 2ff881bf1d64cb64ea51879113b507bb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -253,6 +267,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3288249031738862820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2204918255686029904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ede02566baecfde4c86d220e6e350815, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2840592565565690856
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,6 +290,7 @@ GameObject:
   - component: {fileID: 7293932775357685940}
   - component: {fileID: 2534392821951928454}
   - component: {fileID: 3324036364475371398}
+  - component: {fileID: 2768433933440376283}
   m_Layer: 0
   m_Name: Wheel_rr
   m_TagString: Untagged
@@ -314,7 +341,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7cce38ba40b7d05439de10ddde5afaf6, type: 2}
+  - {fileID: 2100000, guid: 2ff881bf1d64cb64ea51879113b507bb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -336,6 +363,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2768433933440376283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2840592565565690856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ede02566baecfde4c86d220e6e350815, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4213603439703814054
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,6 +386,7 @@ GameObject:
   - component: {fileID: 3254473256684023044}
   - component: {fileID: 7851742050244602412}
   - component: {fileID: 2356636976018910472}
+  - component: {fileID: 4013099536390938386}
   m_Layer: 0
   m_Name: Wheel_rl
   m_TagString: Untagged
@@ -397,7 +437,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7cce38ba40b7d05439de10ddde5afaf6, type: 2}
+  - {fileID: 2100000, guid: 2ff881bf1d64cb64ea51879113b507bb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -419,6 +459,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4013099536390938386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4213603439703814054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ede02566baecfde4c86d220e6e350815, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8306600224925288452
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -426,10 +478,50 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1110485598623525384, guid: ddddefe2f68099c4a8892c5a861a29bb, type: 3}
+      propertyPath: _renderers.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1110485598623525384, guid: ddddefe2f68099c4a8892c5a861a29bb, type: 3}
+      propertyPath: _renderers.Array.data[0]
+      value: 
+      objectReference: {fileID: 8743882303219533935}
+    - target: {fileID: 1110485598623525384, guid: ddddefe2f68099c4a8892c5a861a29bb, type: 3}
+      propertyPath: _renderers.Array.data[1]
+      value: 
+      objectReference: {fileID: 860033165458793263}
+    - target: {fileID: 1110485598623525384, guid: ddddefe2f68099c4a8892c5a861a29bb, type: 3}
+      propertyPath: _renderers.Array.data[2]
+      value: 
+      objectReference: {fileID: 5954048065989466740}
+    - target: {fileID: 1110485598623525384, guid: ddddefe2f68099c4a8892c5a861a29bb, type: 3}
+      propertyPath: _renderers.Array.data[3]
+      value: 
+      objectReference: {fileID: 2356636976018910472}
+    - target: {fileID: 1110485598623525384, guid: ddddefe2f68099c4a8892c5a861a29bb, type: 3}
+      propertyPath: _renderers.Array.data[4]
+      value: 
+      objectReference: {fileID: 3324036364475371398}
     - target: {fileID: 4409278562995474741, guid: ddddefe2f68099c4a8892c5a861a29bb, type: 3}
       propertyPath: _data
       value: 
       objectReference: {fileID: 11400000, guid: f9269b59464044b409e8a1b537614175, type: 2}
+    - target: {fileID: 6185529180902072181, guid: ddddefe2f68099c4a8892c5a861a29bb, type: 3}
+      propertyPath: _renderer
+      value: 
+      objectReference: {fileID: 8743882303219533935}
+    - target: {fileID: 6185529180902072181, guid: ddddefe2f68099c4a8892c5a861a29bb, type: 3}
+      propertyPath: _renderers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6185529180902072181, guid: ddddefe2f68099c4a8892c5a861a29bb, type: 3}
+      propertyPath: _renderers.Array.data[0]
+      value: 
+      objectReference: {fileID: 8743882303219533935}
+    - target: {fileID: 6185529180902072181, guid: ddddefe2f68099c4a8892c5a861a29bb, type: 3}
+      propertyPath: _renderers.Array.data[1]
+      value: 
+      objectReference: {fileID: 860033165458793263}
     - target: {fileID: 8306600224925402956, guid: ddddefe2f68099c4a8892c5a861a29bb, type: 3}
       propertyPath: m_Name
       value: Vehicle_Van_Green

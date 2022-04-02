@@ -744,6 +744,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5658390855800005106}
+  - component: {fileID: 924329787241274544}
+  - component: {fileID: 1110485598623525384}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -766,6 +768,38 @@ Transform:
   m_Father: {fileID: 8306600224925439916}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &924329787241274544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7314204862381735222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.8666667, g: 1, b: 0, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &1110485598623525384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7314204862381735222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0faf1a93cc69204b99edc5dc2bda33c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startDissolve: 1
+  _renderers: []
 --- !u!1 &8306600224925402956
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,8 +812,8 @@ GameObject:
   - component: {fileID: 7225562161794596294}
   - component: {fileID: 9050222159293609789}
   - component: {fileID: 4409278562995474741}
+  - component: {fileID: 3104491894298770790}
   - component: {fileID: 3596497480755430007}
-  - component: {fileID: 6891548469815459841}
   m_Layer: 0
   m_Name: Vehicle
   m_TagString: Untagged
@@ -846,8 +880,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 372b65f3099732c4eb2b1b2dc3131701, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _data: {fileID: 0}
+  _view: {fileID: 3104491894298770790}
   _ui: {fileID: 3596497480755430007}
+  _data: {fileID: 0}
+--- !u!114 &3104491894298770790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8306600224925402956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a866a7c59974c8eb37be8fa7d7caefb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dissolveEffect: {fileID: 1110485598623525384}
 --- !u!114 &3596497480755430007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -861,25 +909,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _vehicle: {fileID: 4409278562995474741}
+  _outline: {fileID: 924329787241274544}
   _canvas: {fileID: 3454144035129470329}
-  _outline: {fileID: 6891548469815459841}
   _textOwner: {fileID: 7327374241517548269}
   _textSpeed: {fileID: 8084107479516392485}
---- !u!114 &6891548469815459841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8306600224925402956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 0.8666667, g: 1, b: 0, a: 1}
-  outlineWidth: 5
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []

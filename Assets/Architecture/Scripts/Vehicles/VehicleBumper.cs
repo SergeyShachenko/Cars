@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Vehicles
 {
-    public class Bumper : MonoBehaviour
+    public class VehicleBumper : MonoBehaviour
     {
         public Vehicle Vehicle => _vehicle;
         
@@ -20,7 +20,7 @@ namespace Vehicles
                 }
                 else
                 {
-                    _vehicle.CurrentSpeed = 0f;
+                    _vehicle.Stop();
                 }
             }
         }

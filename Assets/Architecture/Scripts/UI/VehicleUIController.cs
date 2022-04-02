@@ -1,4 +1,5 @@
-﻿using Services;
+﻿using Effects;
+using Services;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -8,14 +9,13 @@ namespace UI
 {
     public class VehicleUIController : MonoBehaviour, IPointerClickHandler
     {
-        public bool IsVisible => _isVisible;
+        public bool IsVisible { get; private set; }
 
         [SerializeField] private Vehicle _vehicle;
-        [SerializeField] private Transform _canvas;
         [SerializeField] private Outline _outline;
+        [SerializeField] private Transform _canvas;
         [SerializeField] private TMP_Text _textOwner, _textSpeed;
         private GameServices _gameServices;
-        private bool _isVisible;
 
 
         private void Start()
@@ -34,9 +34,9 @@ namespace UI
 
         void IPointerClickHandler.OnPointerClick(PointerEventData eventData)
         {
-            VisibleUI(!_isVisible);
+            VisibleUI(!IsVisible);
 
-            if (_isVisible)
+            if (IsVisible)
             {
                 if (_gameServices.SceneData.PreviousSelectedVehicle != null)
                     _gameServices.SceneData.PreviousSelectedVehicle.UI.VisibleUI(false);
@@ -53,7 +53,7 @@ namespace UI
 
         public void VisibleUI(bool isVisible)
         {
-            _isVisible = isVisible;
+            IsVisible = isVisible;
             _outline.enabled = isVisible;
             _textOwner.transform.parent.gameObject.SetActive(isVisible);
             _textSpeed.transform.parent.gameObject.SetActive(isVisible);
